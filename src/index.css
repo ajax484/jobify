@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "jetBrains";
+    font-display: swap;
+    src: url('./Assets/Fonts/jetBrains.ttf');
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    font-display: swap;
+    src: url('./Assets/Fonts/JosefinSans.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @apply font-primary;
+}
+
+body {
+    background-color: #07071c;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3fr, 1fr);
+    grid-row: 3fr;
+}
+
+/* .button {
+    @apply bg-gold hover:bg-white hover:text-black hover:underline hover:underline-offset-4 [text-decoration-color:#EE8B45] transition-all duration-150 font-poppinsMedium
+} */
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-primary
+}
+
+.gradient-text {
+    background: linear-gradient(88.77deg, rgba(216, 91, 232, 0.7) 8.48%, rgba(76, 66, 214, 0.4) 70.81%), #0CFFD3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.active-link {
+    @apply text-primary underline underline-offset-8
+}
+
+.button {
+    @apply border-2 transition-colors duration-150 font-secondary text-sm md:text-base
+}
+
+.polygon {
+    clip-path: polygon(25.00% 0.00%, 100.00% 0.00%, 100.00% 75.00%, 75.00% 100.00%, 0.00% 100.00%, 0.00% 25.00%);
+}
+
+.button-primary {
+    @apply bg-primary border-primary
+}
+
+.button-secondary {
+    @apply bg-black border-white
+}
+
+.button-tertiary {
+    @apply border-[1px] border-tertiary
+}
+
+.button__border-gradient {
+    /* border-image: linear-gradient(90deg, rgba(216, 91, 232, 0.7) 0%, rgba(76, 66, 214, 0.4) 25%, #0CFFD3 100%) 1; */
+    border-image: linear-gradient(90.09deg, rgba(216, 91, 232, 0.7) 0.08%, rgba(76, 66, 214, 0.4) 99.96%, #FFFFFF 100%) 1;
+    @apply border-[1px] border-solid
+}
+
+.hero {
+    background: linear-gradient(88.77deg, rgba(216, 91, 232, 0.7) 8.48%, rgba(76, 66, 214, 0.4) 70.81%), #0CFFD3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+}
+
+.heroimg-div {
+    background: linear-gradient(0deg, rgba(0, 83, 152, 0.801), rgba(0, 83, 152, 0.801)), linear-gradient(0deg, rgba(216, 91, 232, 0.7), rgba(216, 91, 232, 0.7)), #00E0B8;
+    filter: blur(281px);
+}
+
+.border-gradient {
+    border: 2px solid;
+    border-color: #00E0B8;
+    border-image: linear-gradient(90deg, rgba(216, 91, 232, 0.7) 0%, rgba(76, 66, 214, 0.4) 25%, #0CFFD3 100%) 1;
+}
+
+.divider {
+    background: linear-gradient(88.77deg, rgba(216, 91, 232, 0.7) 8.48%, rgba(76, 66, 214, 0.4) 70.81%, #0CFFD3 100%);
+    height: 1px;
+    width: 100%;
+}
