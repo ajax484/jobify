@@ -1,0 +1,84 @@
+.alert {
+    transition: bottom 300ms 200ms ease-out, left 500ms ease-out, transform 500ms ease-out, opacity 500ms ease-out;
+    animation: alert-enter 500ms, alert-exit 500ms 3800ms;
+    @apply flex items-center transform -translate-x-1/2 max-w-[30rem] w-screen pl-6 pr-3 py-3 bg-background rounded-md shadow-md overflow-hidden !z-[100000];
+}
+
+.alert p {
+    @apply font-bold flex-1 mx-2
+}
+
+.alert .icon {
+    @apply h-6 w-6 cursor-pointer
+}
+
+.alert .duration-bar {
+    animation: alert-duration-bar-shrink forwards 500ms linear;
+    @apply h-1 w-full bg-secondary absolute bottom-0 left-0
+}
+
+.alert.success {
+    @apply bg-green-200 text-green-700
+}
+
+.alert.success .duration-bar {
+    @apply bg-green-900
+}
+
+.alert.info {
+    @apply bg-sky-300 text-sky-700
+}
+
+.alert.info .duration-bar {
+    @apply bg-sky-900
+}
+
+.alert.warning {
+    @apply bg-yellow-300 text-yellow-700
+}
+
+.alert.warning .duration-bar {
+    @apply bg-yellow-900
+}
+
+.alert.error {
+    @apply bg-red-300 text-red-700
+}
+
+.alert.error .duration-bar {
+    @apply bg-red-900
+}
+
+@keyframes alert-enter {
+    from {
+        left: 0;
+        transform: translate(-100%);
+    }
+
+    to {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@keyframes alert-exit {
+    from {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    to {
+        left: 100%;
+        transform: translate(0%);
+    }
+}
+
+@keyframes alert-duration-bar-shrink {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}

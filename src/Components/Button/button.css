@@ -1,0 +1,39 @@
+/* button basse style */
+.button {
+    @apply border-2 transition-colors duration-150 font-secondary text-sm md:text-base flex items-center disabled:hover:bg-gray-300 disabled:hover:text-gray-500 disabled:cursor-not-allowed
+}
+
+/* button colors */
+.button-primary {
+    @apply bg-primary border-primary text-white hover:bg-white hover:text-primary 
+}
+
+.button-secondary {
+    @apply bg-secondary border-primary text-black hover:bg-white hover:text-primary
+}
+
+.button-default {
+    @apply border-gray-300 bg-white text-gray-700
+}
+
+/* button sizes */
+.button-full {
+    @apply w-full rounded-lg flex justify-center py-4 gap-x-4
+}
+
+.button-fit {
+    @apply w-fit rounded-md py-2 gap-x-2
+}
+
+/* button padding */
+.button-normal{
+    @apply p-2
+}
+
+.button-tight{
+    @apply p-1
+}
+
+.button-wide{
+    @apply p-4
+}

@@ -1,0 +1,7 @@
+.alerts-container {
+    @apply fixed bottom-8 left-1/2 z-[20000] flex flex-col-reverse gap-y-2 transition-all duration-300
+}
+
+.alert.hiding {
+    @apply left-full translate-x-0 opacity-0
+}

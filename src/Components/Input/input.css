@@ -1,0 +1,35 @@
+.input__container {
+    @apply p-1.5 flex items-center gap-4 rounded-md border-2 transition-colors duration-150
+}
+
+.full {
+    @apply w-full 
+}
+
+.fit {
+    @apply w-fit
+}
+
+.primary {
+    @apply bg-white border-white
+}
+
+.transparent {
+    @apply bg-transparent border-gray-200
+}
+
+.input__container-focus.primary {
+    @apply  !border-gray-200
+}
+
+.input__container-focus.transparent {
+    @apply  !bg-gray-100 border-gray-300
+}
+
+.input__icon {
+    @apply h-6 w-6 text-slate-500;
+}
+
+.input__container input {
+    @apply text-lg m-0 p-0.5 w-full outline-none bg-transparent
+}

@@ -13,7 +13,7 @@ module.exports = {
       'xs': '340px',
       // => @media (min-width: 340px) { ... }
 
-      'sm': '540px',
+      'sm': '425px',
       // => @media (min-width: 540px) { ... }
 
       'md': '768px',
@@ -31,16 +31,22 @@ module.exports = {
 
     extend: {
       colors: {
-        primary: "#2DBCE4",
-        tertiary: "#0A2A35"
+        primary: "#00756A",
+        secondary: "#E6F1F0",
+        tertiary: "#373656",
+        background: '#FAFAFA'
       },
 
       fontFamily: {
-        primary: ['Josefin Sans', 'sans-serif'],
-        secondary: ['jetBrains', 'sans-serif'],
+        primary: ['poppins', 'sans-serif'],
+        secondary: ['Josefin Sans', 'sans-serif'],
+        primarySemiBold: ['poppinsSemiBold', 'sans-serif'],
+        primaryExtraBold: ['poppinsExtraBold', 'sans-serif'],
+        primaryBlack: ['poppinsBlack', 'sans-serif'],
       },
 
       fontSize: {
+        'xxs': '0.5rem',
         'hero': '2.75rem'
       },
 

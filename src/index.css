@@ -14,6 +14,36 @@
     src: url('./Assets/Fonts/JosefinSans.ttf');
 }
 
+@font-face {
+    font-family: "poppins";
+    font-display: swap;
+    src: url('./Assets/Fonts/poppins.ttf');
+}
+
+@font-face {
+    font-family: "poppinsBlack";
+    font-display: swap;
+    src: url('./Assets/Fonts/Poppins-Black.ttf');
+}
+
+@font-face {
+    font-family: "poppinsExtraBold";
+    font-display: swap;
+    src: url('./Assets/Fonts/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "poppinsSemiBold";
+    font-display: swap;
+    src: url('./Assets/Fonts/Poppins-SemiBold.ttf');
+}
+
+:root {
+    --orbit1: 225px;
+    --orbit2: 150px;
+    --orbit3: -100px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +52,7 @@
 }
 
 body {
-    background-color: #07071c;
+    background-color: #fafafa;
 }
 
 .row {
@@ -30,10 +60,6 @@ body {
     grid-template-columns: repeat(3fr, 1fr);
     grid-row: 3fr;
 }
-
-/* .button {
-    @apply bg-gold hover:bg-white hover:text-black hover:underline hover:underline-offset-4 [text-decoration-color:#EE8B45] transition-all duration-150 font-poppinsMedium
-} */
 
 .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -52,6 +78,91 @@ h1, h2, h3, h4, h5, h6 {
     @apply font-primary
 }
 
+/* General classes */
+.place-center {
+    @apply -translate-x-1/2 -translate-y-1/2
+}
+
+.center-object {
+    @apply absolute top-1/2 left-1/2
+}
+
+/* Hero section */
+.circular-path {
+    @apply border-2 border-gray-300 border-dashed rounded-full flex items-center justify-center
+}
+
+.dividing__text::before, .dividing__text::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+    @apply bg-gray-300
+}
+
+.dividing__text::before {
+    left: 0.5px;
+    margin-right: -50%;
+}
+
+.dividing__text::after {
+    right: 0.5px;
+    margin-left: -50%;
+}
+
+.circular-motion1 {
+    animation: myOrbit1 15s linear infinite;
+}
+
+.circular-motion2 {
+    animation: myOrbit2 10s linear infinite;
+}
+
+.circular-motion3 {
+    animation: myOrbit3 10s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --orbit1: 150px;
+        --orbit2: 100px;
+        --orbit3: -50px;
+    }
+}
+
+@keyframes myOrbit1 {
+    from {
+        transform: rotate(0deg) translateX(var(--orbit1)) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(var(--orbit1)) rotate(-360deg);
+    }
+}
+
+@keyframes myOrbit2 {
+    from {
+        transform: rotate(0deg) translateX(var(--orbit2)) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(var(--orbit2)) rotate(-360deg);
+    }
+}
+
+@keyframes myOrbit3 {
+    from {
+        transform: rotate(0deg) translateX(var(--orbit3)) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(var(--orbit3)) rotate(-360deg);
+    }
+}
+
+
 .gradient-text {
     background: linear-gradient(88.77deg, rgba(216, 91, 232, 0.7) 8.48%, rgba(76, 66, 214, 0.4) 70.81%), #0CFFD3;
     -webkit-background-clip: text;
@@ -62,25 +173,10 @@ h1, h2, h3, h4, h5, h6 {
     @apply text-primary underline underline-offset-8
 }
 
-.button {
-    @apply border-2 transition-colors duration-150 font-secondary text-sm md:text-base
-}
-
 .polygon {
     clip-path: polygon(25.00% 0.00%, 100.00% 0.00%, 100.00% 75.00%, 75.00% 100.00%, 0.00% 100.00%, 0.00% 25.00%);
 }
 
-.button-primary {
-    @apply bg-primary border-primary
-}
-
-.button-secondary {
-    @apply bg-black border-white
-}
-
-.button-tertiary {
-    @apply border-[1px] border-tertiary
-}
 
 .button__border-gradient {
     /* border-image: linear-gradient(90deg, rgba(216, 91, 232, 0.7) 0%, rgba(76, 66, 214, 0.4) 25%, #0CFFD3 100%) 1; */
