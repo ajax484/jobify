@@ -21,7 +21,7 @@ export default function LogoSection() {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                markers: true,
+                
                 trigger: mainEl,
                 start: "bottom center",
                 end: `=+${mainEl.offsetHeight * amount}`,

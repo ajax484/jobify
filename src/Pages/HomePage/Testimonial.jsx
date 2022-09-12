@@ -52,7 +52,7 @@ const Testimonial = () => {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                markers: true,
+                
                 trigger: mainEl,
                 start: "top top",
                 end: `=+${mainEl.offsetHeight * 4}`,

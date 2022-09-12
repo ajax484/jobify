@@ -25,7 +25,7 @@ export default function WhyTrusted() {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                markers: true,
+                
                 trigger: mainEl,
                 start: "top top",
                 end: `=+${mainEl.offsetHeight * 2}`,

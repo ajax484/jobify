@@ -46,7 +46,7 @@ export default function HowItWorks() {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                markers: true,
+                
                 trigger: mainEl,
                 start: "top top",
                 end: `=+${mainEl.offsetHeight * 2}`,
@@ -74,7 +74,7 @@ export default function HowItWorks() {
         //         opacity: 1,
         //         x: 0,
         //         scrollTrigger: {
-        //             markers: true,
+        //             
         //             trigger: mainEl,
         //             start: "top top",
         //             end: `=+${mainEl.offsetHeight}`,
