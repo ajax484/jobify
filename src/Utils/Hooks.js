@@ -94,6 +94,8 @@ export const useGetJobs = () => {
                 jobsList.push({ id: doc.id, data: doc.data() });
             });
 
+            console.log(jobsList);
+
             dispatch({ type: ACTIONS.GET_DATA, payload: { jobsList } })
         } catch (err) {
             console.error(err);

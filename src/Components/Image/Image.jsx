@@ -28,7 +28,7 @@ const Image = ({ image, alt, parentRef }) => {
         }
 
         const imageRef = ref(storageRef, image)
-        console.log(imageRef);
+        // console.log(imageRef);
 
         getDownloadURL(imageRef)
             .then((url) => {
@@ -48,7 +48,7 @@ const Image = ({ image, alt, parentRef }) => {
                 // const img = document.getElementById('myimg');
                 // img.setAttribute('src', url);
 
-                console.log(url);
+                // console.log(url);
                 setImgUrl(url);
                 setState({ loading: false, error: false })
             })

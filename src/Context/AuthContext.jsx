@@ -36,6 +36,17 @@ const AuthContextWrapper = ({ children }) => {
                 });
 
                 user = res2.user;
+
+                await addDoc(collection(db, "userJobsData"), {
+                    applied: [],
+                    archived: [],
+                    matches: [],
+                    offers: [],
+                    saved: [],
+                    interviews: [],
+                    uid: user.uid,
+                });
+
                 docs = await getDocs(q);
             }
 
@@ -80,7 +91,9 @@ const AuthContextWrapper = ({ children }) => {
             console.log(res.user);
             const user = res.user;
 
-            if (fetchUserData(user)) {
+            const isUserDataFetched = await fetchUserData(user);
+
+            if (isUserDataFetched) {
                 navigate("/app/dashboard");
                 setIsLoggedIn(true);
 

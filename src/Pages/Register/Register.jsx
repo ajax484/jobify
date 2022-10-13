@@ -32,7 +32,7 @@ const initialValues = {
 
 function Register() {
     const [disabled, setDisabled] = useState(true);
-    const {signInWithGoogle} = useContext(AuthContext);
+    const { signInWithGoogle } = useContext(AuthContext);
     const alertContext = useContext(AlertContext);
     const navigate = useNavigate();
 
@@ -60,6 +60,16 @@ function Register() {
                     name,
                     authProvider: "local",
                     email,
+                });
+
+                await addDoc(collection(db, "userJobsData"), {
+                    applied: [],
+                    archived: [],
+                    matches: [],
+                    offers: [],
+                    saved: [],
+                    interviews: [],
+                    uid: user.uid,
                 });
 
                 navigate("/app/login");
@@ -102,7 +112,7 @@ function Register() {
                             icon={<img src={Google} alt="" />}
                             color="default"
                             size="full"
-                            isformbutton={false} 
+                            isformbutton={false}
                         />
                     </div>
 
@@ -153,7 +163,7 @@ function Register() {
                             onClick={register}
                             size="full"
                             disabled={disabled}
-                            isformbutton={true} 
+                            isformbutton={true}
                         />
                         <div>
                             Already have an account? <Link to="/app/login"><span className="text-primary font-bold">Sign in</span></Link>

@@ -218,8 +218,8 @@ const JobsList = ({ jobsList, loading }) => {
                                 openOverlay={() => showJobData(index)}
                                 jobActions={jobActions}
                                 USERJOBFIELDS={USERJOBFIELDS}
-                                savedCheck={userJobsDataloading ? !userJobsDataloading : userJobsData['saved'].includes(job.id)}
-                                archivedCheck={userJobsDataloading ? !userJobsDataloading : userJobsData['archived'].includes(job.id)}
+                                savedCheck={userJobsDataloading ? !userJobsDataloading : userJobsData['saved']?.includes(job.id)}
+                                archivedCheck={userJobsDataloading ? !userJobsDataloading : userJobsData['archived']?.includes(job.id)}
                             />
                         )
                     )

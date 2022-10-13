@@ -39,6 +39,7 @@ export default function Navbar() {
   const { logOut } = useContext(AuthContext);
 
   const { userData } = useContext(AuthContext);
+  console.log(userData);
   const nodeRef = useRef(null);
 
   useClickOutside(nodeRef, () => { setOpen(false) });
